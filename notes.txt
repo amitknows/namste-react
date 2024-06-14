@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+
+# There are two types of dependecies
+
+1. Normal Dependicies - used in dng a our app
+2. Dev Dependicies - used only during development phase not in production
+
+
+# tilde and caret in package.json
+
+# package.json 
+
+#  package-lock.json keeps the record of exact version of every package and dependecies
+
+# integrity -keeps a hash  
+
+
+
+# node_modules 
+
+# transitive dependencies 
+
+
