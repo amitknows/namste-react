@@ -1,4 +1,31 @@
-#heading{
-    color:red;
-    background-color: orange;
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+}
+
+.nav-items >  ul{
+    font-weight: 600;
+    font-size: 24px;
+    display : flex;
+    list-style-type: none;
+    
+}
+
+.logo{
+    height: 100px;
+}
+
+.nav-items{
+    padding: 0px 20px;
+}
+
+.nav-items>ul>li{
+    padding: 10px;
+    margin: 10px;
+    
 }

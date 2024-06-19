@@ -1,23 +1,31 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-//React Element
+const AppLayout = () => {
+  return <div className="app">
 
-const heading = (
-  <h1 className="head">Namste React using JSX</h1>
-)
+    <Header/>
+  </div>;
+};
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// React functional Component
- const HeadingComponent = ()=>{
-  return <h1>Namste React Functinoal Component 🚀</h1>;
-  
-  
-
- }
-
-
-const root = ReactDOM.create(document.getElementById("root"));
-
-root.render(heading)
+root.render(<AppLayout/>);

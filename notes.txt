@@ -30,3 +30,27 @@
 #component composition
 
 
+
+
+/************************************************************/
+Food Ordering App
+
+Name of our app -> Thali
+
+
+1. make UI / do wireframe
+    > 
+
+2. What components we can have in our app   
+    > Header
+        - Logo
+        - Nav Items
+        - 
+    > Body
+        - Search
+        - Restaurent Card Container
+    > Footer
+        - Copyright
+        - Links
+        - Address
+        - Contact
