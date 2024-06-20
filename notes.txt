@@ -27,11 +27,11 @@
 # transitive dependencies 
 
 
-#component composition
+# component composition
 
+# nullish coalescing operator (??)
 
-
-
+# never use index as key in map function its bad practice
 /************************************************************/
 Food Ordering App
 
@@ -48,9 +48,25 @@ Name of our app -> Thali
         - 
     > Body
         - Search
-        - Restaurent Card Container
+        - Restaurent Card 
+            • image
+            • Name of res,
+            •
     > Footer
         - Copyright
         - Links
         - Address
         - Contact
+
+
+
+
+
+
+
+
+
+
+// Frontend System Design interview
+    - Config driven UI
+         our website is driven by config
