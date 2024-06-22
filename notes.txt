@@ -70,3 +70,8 @@ Name of our app -> Thali
 // Frontend System Design interview
     - Config driven UI
          our website is driven by config
+
+
+
+
+// Reconciliation Algorithm (React Fibre)
