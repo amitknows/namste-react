@@ -1,144 +1,166 @@
 const data = [
-    {
-      id: "695596",
-      name: null,
-      cloudinaryImageId: "cc84d172c8acb034e61ffaeb2d2557e3",
-      locality: "Shree Raj Complex",
-      areaName: "Srikrishnapuri",
-      costForTwo: "₹299 for two",
-      cuisines: ["Desserts", "Bakery"],
-      avgRating: 4.4,
-      veg: true,
-      parentId: "392350",
-      avgRatingString: "4.4",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 49,
-        lastMileTravel: 5,
-        serviceability: "SERVICEABLE",
-        slaString: "45-50 mins",
-        lastMileTravelString: "5.0 km",
-        iconType: "ICON_TYPE_EMPTY",
+  {
+      "info": {
+          "id": "659435",
+          "name": "Krishnashree",
+          "cloudinaryImageId": "779fe291c901340e065dd6d64b742b9d",
+          "locality": "Rajendra Path",
+          "areaName": "Kadam Kuan",
+          "costForTwo": "₹400 for two",
+          "cuisines": [
+              "Sweets",
+              "Fast Food",
+              "North Indian",
+              "Bakery",
+              "Beverages"
+          ],
+          "avgRating": 4.4,
+          "veg": true,
+          "parentId": "484388",
+          "avgRatingString": "4.4",
+          "totalRatingsString": "5K+",
+          "sla": {
+              "deliveryTime": 34,
+              "lastMileTravel": 3.7,
+              "serviceability": "SERVICEABLE",
+              "slaString": "30-35 mins",
+              "lastMileTravelString": "3.7 km",
+              "iconType": "ICON_TYPE_EMPTY"
+          },
+          "availability": {
+              "nextCloseTime": "2024-06-24 22:30:00",
+              "opened": true
+          },
+          "badges": {
+              "imageBadges": [
+                  {
+                      "imageId": "v1695133679/badges/Pure_Veg111.png",
+                      "description": "pureveg"
+                  }
+              ]
+          },
+          "isOpen": true,
+          "aggregatedDiscountInfoV2": {},
+          "type": "F",
+          "badgesV2": {
+              "entityBadges": {
+                  "imageBased": {
+                      "badgeObject": [
+                          {
+                              "attributes": {
+                                  "description": "pureveg",
+                                  "imageId": "v1695133679/badges/Pure_Veg111.png"
+                              }
+                          }
+                      ]
+                  },
+                  "textBased": {},
+                  "textExtendedBadges": {}
+              }
+          },
+          "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+              }
+          },
+          "reviewsSummary": {},
+          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          "restaurantOfferPresentationInfo": {}
       },
-      availability: {
-        nextCloseTime: "2024-06-20 23:59:00",
-        opened: true,
+      "analytics": {},
+      "cta": {
+          "link": "https://www.swiggy.com/restaurants/krishnashree-rajendra-path-kadam-kuan-patna-659435",
+          "type": "WEBLINK"
+      }
+  },
+  {
+      "info": {
+          "id": "253169",
+          "name": "Bikaner Sweets and Pastry Shop",
+          "cloudinaryImageId": "gd1wohldbsmjuv5mstp7",
+          "locality": "Ghrounda",
+          "areaName": "Kankarbagh",
+          "costForTwo": "₹449 for two",
+          "cuisines": [
+              "Bakery",
+              "Sweets"
+          ],
+          "avgRating": 4.5,
+          "veg": true,
+          "parentId": "45906",
+          "avgRatingString": "4.5",
+          "totalRatingsString": "10K+",
+          "sla": {
+              "deliveryTime": 27,
+              "lastMileTravel": 2.4,
+              "serviceability": "SERVICEABLE",
+              "slaString": "25-30 mins",
+              "lastMileTravelString": "2.4 km",
+              "iconType": "ICON_TYPE_EMPTY"
+          },
+          "availability": {
+              "nextCloseTime": "2024-06-24 22:00:00",
+              "opened": true
+          },
+          "badges": {
+              "imageBadges": [
+                  {
+                      "imageId": "Rxawards/_CATEGORY-Mithai.png",
+                      "description": "Delivery!"
+                  },
+                  {
+                      "imageId": "v1695133679/badges/Pure_Veg111.png",
+                      "description": "pureveg"
+                  }
+              ]
+          },
+          "isOpen": true,
+          "aggregatedDiscountInfoV2": {},
+          "type": "F",
+          "badgesV2": {
+              "entityBadges": {
+                  "imageBased": {
+                      "badgeObject": [
+                          {
+                              "attributes": {
+                                  "description": "Delivery!",
+                                  "imageId": "Rxawards/_CATEGORY-Mithai.png"
+                              }
+                          },
+                          {
+                              "attributes": {
+                                  "description": "pureveg",
+                                  "imageId": "v1695133679/badges/Pure_Veg111.png"
+                              }
+                          }
+                      ]
+                  },
+                  "textBased": {},
+                  "textExtendedBadges": {}
+              }
+          },
+          "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                  "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                  "lottie": {},
+                  "video": {}
+              }
+          },
+          "reviewsSummary": {},
+          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+          "restaurantOfferPresentationInfo": {}
       },
-
-      isOpen: true,
-      type: "F",
-
-      aggregatedDiscountInfoV3: {
-        header: "60% OFF",
-        subHeader: "UPTO ₹120",
-      },
-    },
-
-    {
-      id: "88779",
-      name: "Dosa Plaza (Pure Veg)",
-      cloudinaryImageId: "knmjxpweybgksjfvoulq",
-      locality: "Mithapur",
-      areaName: "Biscomaun Bhawan",
-      costForTwo: "₹300 for two",
-      cuisines: ["South Indian"],
-      avgRating: 4,
-      parentId: "8016",
-      avgRatingString: "4.0",
-      totalRatingsString: "5K+",
-      sla: {
-        deliveryTime: 45,
-        lastMileTravel: 3.9,
-        serviceability: "SERVICEABLE",
-        slaString: "40-45 mins",
-        lastMileTravelString: "3.9 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-06-20 23:59:00",
-        opened: true,
-      },
-
-      isOpen: true,
-      type: "F",
-
-      aggregatedDiscountInfoV3: {
-        header: "₹100 OFF",
-        subHeader: "ABOVE ₹199",
-        discountTag: "FLAT DEAL",
-      },
-    },
-
-    {
-      id: "411673",
-      name: "Hotel Anand Sagar",
-      cloudinaryImageId: "umlluzualet7ewvbbwqs",
-      locality: "Bankman Colony",
-      areaName: "Kankarbagh",
-      costForTwo: "₹200 for two",
-      cuisines: ["North Indian", "Biryani", "Desserts"],
-      avgRating: 4.3,
-      parentId: "247071",
-      avgRatingString: "4.3",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 70,
-        lastMileTravel: 3.6,
-        serviceability: "SERVICEABLE",
-        slaString: "65-70 mins",
-        lastMileTravelString: "3.6 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-06-20 23:00:00",
-        opened: true,
-      },
-
-      isOpen: true,
-      type: "F",
-
-      aggregatedDiscountInfoV3: {
-        header: "20% OFF",
-        discountTag: "FLAT DEAL",
-      },
-    },
-
-    {
-      id: "328777",
-      name: "Govinda Dhaba",
-      cloudinaryImageId: "0e8256e8ee857290d64d27ee38729e60",
-      locality: "Budh Vihar",
-      areaName: "Srikrishnapuri",
-      costForTwo: "₹320 for two",
-      cuisines: ["Thalis", "North Indian"],
-      avgRating: 3.9,
-      parentId: "89405",
-      avgRatingString: "3.9",
-      totalRatingsString: "1K+",
-      sla: {
-        deliveryTime: 37,
-        lastMileTravel: 3,
-        serviceability: "SERVICEABLE",
-        slaString: "35-40 mins",
-        lastMileTravelString: "3.0 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-06-21 00:00:00",
-        opened: true,
-      },
-
-      isOpen: true,
-      type: "F",
-
-      aggregatedDiscountInfoV3: {
-        header: "₹125 OFF",
-        subHeader: "ABOVE ₹249",
-        discountTag: "FLAT DEAL",
-      },
-    },
-  ];
-
+      "analytics": {},
+      "cta": {
+          "link": "https://www.swiggy.com/restaurants/bikaner-sweets-and-pastry-shop-ghrounda-kankarbagh-patna-253169",
+          "type": "WEBLINK"
+      }
+  },
+]
 
 
   export default data

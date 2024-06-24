@@ -2,14 +2,15 @@ import React from "react";
 import { CDN_URL } from "../utils/constant";
 const ResturantCard = ({ resName }) => {
 
-  // console.log(resName);
+
+//  console.log("resCard", resName.info);
 
   const cloudinary_url = CDN_URL;
   
 
 
   const { name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId } =
-    resName;
+    resName.info;
 
   return (
     <>
