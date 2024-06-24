@@ -30,6 +30,7 @@
 # component composition
 
 # nullish coalescing operator (??)
+# whenever state is update , react triggers a re-concilation cycle/ re render
 
 # never use index as key in map function its bad practice
 /************************************************************/

@@ -5,6 +5,8 @@ import Shimmer from "./Shimmer";
 
 export const Body = () => {
   const [res, setRes] = useState([]);
+  const [search, setSearch] = useState("");
+  const [filteredRes, setFilteredRes] = useState([]);
 
   const topRatedRes = () => {
     let filteredList = res.filter((res) => res.info.avgRating > 4);
@@ -14,6 +16,8 @@ export const Body = () => {
   useEffect(() => {
     fetchData(); // its called after the component rendered
   }, []);
+
+  
 
   async function fetchData() {
     const data = await fetch(
@@ -27,7 +31,10 @@ export const Body = () => {
         ?.restaurants;
 
     setRes(resList);
+     setFilteredRes(resList);
   }
+
+//  console.log(filteredRes)
 
   return res.length === 0 ? (
     <Shimmer />
@@ -36,8 +43,30 @@ export const Body = () => {
       <button className="filter-btn" onClick={topRatedRes}>
         Top Rated Resturants
       </button>
+      <input
+        type="text"
+        placeholder="search resturants"
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          const filterRes = res.filter((res) =>
+            res.info.name.toLowerCase().includes(search.trim().toLowerCase())
+          );
+
+           filterRes.length ? setFilteredRes(filterRes) : "";
+
+         
+
+        }}
+      >
+        Search
+      </button>
       <div className="res-container">
-        {res.map((items, index) => (
+        {filteredRes.map((items, index) => (
           <ResturantCard key={index} resName={items} />
         ))}
       </div>

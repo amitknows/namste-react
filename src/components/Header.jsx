@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { LOGO_URL } from "../utils/constant";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
-  // const [login, setLogin] = useState();
+  const [toggle, setToggle] = useState("Login");
 
-  const handleLogin = () => {};
+ 
 
   return (
     <div className="header">
@@ -19,16 +18,13 @@ const Header = () => {
           <li>Contact Us</li>
           <li>Cart</li>
           <li>
-            <button className="btn"
+            <button
+              className="btn"
               onClick={() => {
-                if (!toggle) {
-                  setToggle(true);
-                } else {
-                  setToggle(false);
-                }
+                toggle === "Login" ? setToggle("Logout") : setToggle("Login");
               }}
             >
-              {toggle ? "Logout" : "Login"}
+              {toggle}
             </button>
           </li>
         </ul>
