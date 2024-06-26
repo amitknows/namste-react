@@ -1,12 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import AppLayout from "./AppLayout";
+
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <div>
-     
-      <AppLayout />
+      <Header />
+      <Outlet />
     </div>
   );
 };
