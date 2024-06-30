@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import ResturantCard from "./ResturantCard";
 import data from "../utils/mockData";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+// import { Link} from "react-router-dom";
 
 export const Body = () => {
   const [res, setRes] = useState([]);
@@ -9,15 +11,13 @@ export const Body = () => {
   const [filteredRes, setFilteredRes] = useState([]);
 
   const topRatedRes = () => {
-    let filteredList = res.filter((res) => res.info.avgRating > 4);
+    let filteredList = res.filter((res) => res.info.avgRating > 4.5);
     setRes(filteredList);
   };
 
   useEffect(() => {
     fetchData(); // its called after the component rendered
   }, []);
-
-  
 
   async function fetchData() {
     const data = await fetch(
@@ -27,14 +27,14 @@ export const Body = () => {
     const json = await data.json();
     //optional chaining ?
     const resList =
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
-    setRes(resList);
-     setFilteredRes(resList);
+    setRes( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    console.log(res)
+    setFilteredRes( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
-//  console.log(filteredRes)
+  
 
   return res.length === 0 ? (
     <Shimmer />
@@ -57,17 +57,17 @@ export const Body = () => {
             res.info.name.toLowerCase().includes(search.trim().toLowerCase())
           );
 
-           filterRes.length ? setFilteredRes(filterRes) : "";
-
-         
-
+          filterRes.length ? setFilteredRes(filterRes) : "";
         }}
       >
         Search
       </button>
       <div className="res-container">
-        {filteredRes.map((items, index) => (
-          <ResturantCard key={index} resName={items} />
+        {filteredRes.map((items) => (
+          <Link key={items?.info.id} to={"/resturants/"+ items.info.id }>
+            {" "}
+            <ResturantCard  resName={items} />
+          </Link>
         ))}
       </div>
     </div>
