@@ -15,22 +15,25 @@ function ResturantMenu() {
   const fetchMenu = async () => {
     try {
       const resData = await fetch(
-        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.5940947&lng=85.1375645&restaurantId="+resId+"&catalog_qa=undefined&submitAction=ENTER"
+        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.5940947&lng=85.1375645&restaurantId=" +
+          resId +
+          "&catalog_qa=undefined&submitAction=ENTER"
       );
 
       const json = await resData.json();
       setResInfo(json?.data?.cards[2]?.card?.card?.info);
-      setMenu(json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card);
+      setMenu(
+        json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card
+      );
       // console.log(json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.categories[1].itemCards);
-      
     } catch (error) {
       console.error("Error fetching Menu", error);
     }
   };
 
-  useEffect(()=>{
-  console.log(menu)
-  },[menu])
+  useEffect(() => {
+    console.log(menu);
+  }, [menu]);
 
   if (!resInfo && !menu) return <Shimmer />;
 
