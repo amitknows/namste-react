@@ -23,17 +23,21 @@ import UserClass from "../components/UserClass";
 // export default AboutUs;
 
 class AboutUs extends Component {
-constructor(){
-  super()
-}
+constructor(props){
+  super(props)
 
+  console.log('Parent Constructor')
+}
+componentDidMount(){
+  console.log('parent component did mount')
+}
   render() {
     const info = {
       name: "Amit",
       Age: 19,
       City: "Siliguri",
     };
-
+console.log('Parent render')
     return (
       <div>
         <div>AboutUs</div>

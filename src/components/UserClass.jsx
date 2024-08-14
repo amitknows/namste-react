@@ -4,30 +4,36 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
 
-this.state = {
-    count : 0,
-    count2 : 2,
-}
+    this.state = {
+      count: 0,
+      count2: 2,
+    };
 
-console.log("constructor")
+    console.log("child constructor");
   }
-
+componentDidMount(){
+  console.log('Child component did mount ')
+}
   render() {
     const { name, Age, City } = this.props.studentInfo;
-   
-   const {count} = this.state
 
-   console.log("render")
+    const { count } = this.state;
+
+    console.log(" child render");
     return (
       <div>
         <div>
           <h1>Class Based Component</h1>
         </div>
-        <button onClick={()=>{
+        <button
+          onClick={() => {
             this.setState({
-                 count: this.state.count +1,
-            })
-        }}>Click</button>
+              count: this.state.count + 1,
+            });
+          }}
+        >
+          Click
+        </button>
         <div>Count : {count}</div>
         <h2>Name : {name}</h2>
         <h3>Location : {City}</h3>
