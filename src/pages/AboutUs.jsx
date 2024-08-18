@@ -46,6 +46,7 @@ console.log('Parent render')
 
         <hr className=" " />
         <UserClass studentInfo={info} />
+        <UserClass studentInfo={info} />
       </div>
     );
   }

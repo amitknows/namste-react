@@ -4,15 +4,15 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      count: 0,
-      count2: 2,
-    };
+   
 
-    console.log("child constructor");
+   // console.log("child constructor");
   }
-componentDidMount(){
-  console.log('Child component did mount ')
+async componentDidMount(){
+  // console.log('Child component did mount ')
+
+const data = fetch('https://api.github.com/users/amitknows')
+console.log(data)
 }
   render() {
     const { name, Age, City } = this.props.studentInfo;
@@ -25,15 +25,7 @@ componentDidMount(){
         <div>
           <h1>Class Based Component</h1>
         </div>
-        <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Click
-        </button>
+      
         <div>Count : {count}</div>
         <h2>Name : {name}</h2>
         <h3>Location : {City}</h3>
