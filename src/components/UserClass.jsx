@@ -3,7 +3,10 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-
+this.state = {
+  userInfo:{name: 'Dummy Name'
+  }
+}
    
 
    // console.log("child constructor");
@@ -11,25 +14,42 @@ class UserClass extends React.Component {
 async componentDidMount(){
   // console.log('Child component did mount ')
 
-const data = fetch('https://api.github.com/users/amitknows')
-console.log(data)
+const data =await fetch('https://api.github.com/users/amitknows')
+const json =await data.json();
+
+console.log(json)
+
+this.setState({
+  userInfo:json
+})
+// console.log('userinfo',userInfo)
+
+}
+
+
+componentDidUpdate(){
+  console.log ('component did update')
+}
+
+componentWillUnmount(){
+  console.log('component will unmount')
 }
   render() {
-    const { name, Age, City } = this.props.studentInfo;
+    const { name, location , avatar_url} = this.state.userInfo;
 
-    const { count } = this.state;
+   
 
-    console.log(" child render");
+    console.log(name);
     return (
       <div>
         <div>
           <h1>Class Based Component</h1>
         </div>
       
-        <div>Count : {count}</div>
+       <img src={avatar_url}/>
         <h2>Name : {name}</h2>
-        <h3>Location : {City}</h3>
-        <h4>Age : {Age}</h4>
+        <h3>Location : {location}</h3>
+      
         <h4>Contact : @amit</h4>
       </div>
     );
