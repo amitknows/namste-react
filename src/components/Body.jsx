@@ -3,9 +3,12 @@ import ResturantCard from "./ResturantCard";
 import data from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 // import { Link} from "react-router-dom";
 
 export const Body = () => {
+  const onlineStatus = useOnlineStatus();
+
   const [res, setRes] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredRes, setFilteredRes] = useState([]);
@@ -27,14 +30,25 @@ export const Body = () => {
     const json = await data.json();
     //optional chaining ?
     const resList =
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
 
-    setRes( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    console.log(res)
-    setFilteredRes( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setRes(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    console.log(res);
+    setFilteredRes(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   }
 
-  
+  if (onlineStatus === false) {
+    return (
+      <h1>
+        Its look like you are offline. Please Check your internet connection
+      </h1>
+    )
+  }
 
   return res.length === 0 ? (
     <Shimmer />
@@ -64,9 +78,9 @@ export const Body = () => {
       </button>
       <div className="res-container">
         {filteredRes.map((items) => (
-          <Link key={items?.info.id} to={"/resturants/"+ items.info.id }>
+          <Link key={items?.info.id} to={"/resturants/" + items.info.id}>
             {" "}
-            <ResturantCard  resName={items} />
+            <ResturantCard resName={items} />
           </Link>
         ))}
       </div>
