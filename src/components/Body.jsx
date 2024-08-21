@@ -13,11 +13,8 @@ export const Body = () => {
   const [search, setSearch] = useState("");
   const [filteredRes, setFilteredRes] = useState([]);
 
-  const topRatedRes = () => {
-    let filteredList = res.filter((res) => res.info.avgRating > 4.5);
-    setRes(filteredList);
-  };
-
+ 
+ 
   useEffect(() => {
     fetchData(); // its called after the component rendered
   }, []);
@@ -41,6 +38,12 @@ export const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
+ 
+
+  const topRatedRes = () => {
+    let filteredList = res.filter((res) => res.info.avgRating > 4);
+    setRes(filteredList);
+  };
 
   if (onlineStatus === false) {
     return (
@@ -81,8 +84,8 @@ export const Body = () => {
       >
         Search
       </button>
-      <div className="">
-        {filteredRes.map((items) => (
+      <div className="flex flex-wrap justify-center">
+        {res.map((items) => (
           <Link key={items?.info.id} to={"/resturants/" + items.info.id}>
             {" "}
             <ResturantCard resName={items} />

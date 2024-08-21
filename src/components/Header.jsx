@@ -12,26 +12,26 @@ const Header = () => {
       <div className="logo-container pl-8">
         <img className="h-28 w-28" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul className="flex m-4 p-4 space-x-4 ">
-          <li className="p-2 ">{onlineStatus ? "👽" : "☠️"}</li>
-          <li className="p-2   hover:bg-blue-500 hover:text-white rounded-lg">
+      <div className="flex items-center">
+        <ul className="flex m-4 p-4 ">
+          <li className="px-3 ">{onlineStatus ? "👽" : "☠️"}</li>
+          <li className="px-3   hover:bg-blue-500 hover:text-white rounded-lg">
             <Link to={"/"}>Home</Link>
           </li>
-          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg ">
+          <li className="px-3 hover:bg-blue-500 hover:text-white rounded-lg ">
             <Link to={"/about"}>About Us</Link>
           </li>
-          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+          <li className="px-3 hover:bg-blue-500 hover:text-white rounded-lg">
             <Link to={"/contact-us"}>Contact Us</Link>
           </li>
-          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+          <li className="px-3 hover:bg-blue-500 hover:text-white rounded-lg">
             <Link to={"/grocery"}>Grocery</Link>
           </li>
-          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+          <li className="px-3 hover:bg-blue-500 hover:text-white rounded-lg">
             <Link to={""}>Cart</Link>
           </li>
 
-          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+          <li className="px-3 hover:bg-blue-500 hover:text-white rounded-lg">
             <button
               className="btn"
               onClick={() => {
