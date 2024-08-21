@@ -47,17 +47,21 @@ export const Body = () => {
       <h1>
         Its look like you are offline. Please Check your internet connection
       </h1>
-    )
+    );
   }
 
   return res.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <button className="filter-btn" onClick={topRatedRes}>
+    <div className="m-4">
+      <button
+        className="bg-slate-700 rounded-lg p-2 text-white hover:bg-slate-600 m-2"
+        onClick={topRatedRes}
+      >
         Top Rated Resturants
       </button>
       <input
+        className="p-1 m-1 text-md font-medium border border-gray-300 rounded-md bg-gray-100  focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 text-gray-700 placeholder-gray-500 w-35 h-10"
         type="text"
         placeholder="search resturants"
         value={search}
@@ -66,6 +70,7 @@ export const Body = () => {
         }}
       />
       <button
+        className="px-4 py-2 rounded-md m-1 font-semibold bg-pink-200 border border-transparent focus:ring-2 focus:ring-blue-500 hover:text-gray-600 "
         onClick={() => {
           const filterRes = res.filter((res) =>
             res.info.name.toLowerCase().includes(search.trim().toLowerCase())
@@ -76,7 +81,7 @@ export const Body = () => {
       >
         Search
       </button>
-      <div className="res-container">
+      <div className="">
         {filteredRes.map((items) => (
           <Link key={items?.info.id} to={"/resturants/" + items.info.id}>
             {" "}

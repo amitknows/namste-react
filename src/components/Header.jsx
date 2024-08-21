@@ -5,24 +5,33 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [toggle, setToggle] = useState("Login");
-const onlineStatus = useOnlineStatus()
- 
+  const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+    <div className="flex justify-between border bg-pink-200 shadow-lg ">
+      <div className="logo-container pl-8">
+        <img className="h-28 w-28" src={LOGO_URL} />
       </div>
       <div className="nav-items">
-        <ul>
-          <li>{onlineStatus?'👽':'☠️'}</li>
-          <li><Link to={'/'}>Home</Link></li>
-          <li><Link to={'/about'}>About Us</Link></li>
-          <li><Link to={'/contact-us'}>Contact Us</Link></li>
-          <li><Link to={'/grocery'}>Grocery</Link></li>
-          <li><Link to={''}>Cart</Link></li>
-         
-          <li>
+        <ul className="flex m-4 p-4 space-x-4 ">
+          <li className="p-2 ">{onlineStatus ? "👽" : "☠️"}</li>
+          <li className="p-2   hover:bg-blue-500 hover:text-white rounded-lg">
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg ">
+            <Link to={"/about"}>About Us</Link>
+          </li>
+          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+            <Link to={"/contact-us"}>Contact Us</Link>
+          </li>
+          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+            <Link to={"/grocery"}>Grocery</Link>
+          </li>
+          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
+            <Link to={""}>Cart</Link>
+          </li>
+
+          <li className="p-2 hover:bg-blue-500 hover:text-white rounded-lg">
             <button
               className="btn"
               onClick={() => {
