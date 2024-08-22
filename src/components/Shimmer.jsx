@@ -2,8 +2,8 @@ import React from 'react'
 
 function Shimmer() {
   return (
-    <div className="shimmer-container">
-       <div className="shimmer-card" ></div>
+    <div className="bg-black">
+       <div className="-card" ></div>
        <div className="shimmer-card" ></div>
        <div className="shimmer-card" ></div>
        <div className="shimmer-card" ></div>
